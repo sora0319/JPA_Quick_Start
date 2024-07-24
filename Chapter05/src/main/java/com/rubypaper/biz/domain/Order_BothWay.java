@@ -17,9 +17,11 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 import lombok.Data;
+import lombok.ToString;
 
 
 @Data
+@ToString(exclude = "productList")
 @Entity
 @Table(name = "S_ORD")
 public class Order_BothWay {

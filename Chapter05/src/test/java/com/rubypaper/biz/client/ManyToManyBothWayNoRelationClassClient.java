@@ -40,8 +40,8 @@ public class ManyToManyBothWayNoRelationClassClient {
 		
 		// 검색한 Product_BothWay를 통해 Order 목록을 출력
 		Product_BothWay product_BothWay = em.find(Product_BothWay.class, 1L);
-		
 		System.out.println(product_BothWay.getName() + "상품에 대한 주문 정보");
+		
 		List<Order_BothWay> orderList = product_BothWay.getOrderList();
 		for(Order_BothWay ordBWay: orderList) {
 			System.out.println("-->" + ordBWay.toString());
